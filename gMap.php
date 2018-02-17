@@ -49,10 +49,10 @@ if ($result->num_rows > 0) {
 
   function codeAddress() {
     for (var office in officeArray) {
-        var address = office.address + ", " + office.zip;
+        var address = office.address + ", " + office.zip + " Vienna, Austria";
         geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == 'OK') {
-            map.setCenter(results[0].geometry.location);
+            // map.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
                 map: map,
                 icon: "img1/BLUE-ICON.png",
