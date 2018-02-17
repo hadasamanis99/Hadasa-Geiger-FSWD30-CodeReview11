@@ -70,8 +70,7 @@ if ($result->num_rows > 0) {
 <h1>Location Map</h1>
 
 <div id="map" style="width: 320px; height: 480px;"></div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&libraries=geocoding&callback=codeAddress"></script> 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2D9v2hT3-ZvelPdmIJ05Rmv9BEfw_hGw&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2D9v2hT3-ZvelPdmIJ05Rmv9BEfw_hGw&libraries=geocoding&callback=codeAddress"
     async defer></script>
 
 
