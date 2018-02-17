@@ -19,12 +19,12 @@ $result = $conn->query($sql);
 echo "<H1>List of cars</H1>";
 if ($result->num_rows > 0) {
     echo "<table class='table table-sm table-inverse'>";
-    echo "<thead class='bg-info text-white'>";
+    echo "<thead class='thead-inverse'>";
     echo "<td> Brand </td><td>Type</td><td>Year</td><td>Miles</td><td>Color</td>";
     echo "</thead>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr class='bg-warning text-white'>";
+        echo "<tr class='bg-info text-black'>";
         echo "<td> " . $row["brand"] . "</td><td>" . $row["Type"] . "</td><td>" . $row["Year_production"] . "</td><td>" .$row["mileage"] . "</td><td>" .$row["color"] . "</td>";
         echo "</tr>";
     }
@@ -33,6 +33,12 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+ <div class="container">
+    <p>  
+        <a class="btn btn-sm btn-primary"  href="index.php">Home</a>
+      </p> 
+  </div>
+
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
